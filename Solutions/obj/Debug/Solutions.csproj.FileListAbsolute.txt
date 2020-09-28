@@ -1,0 +1,6 @@
+C:\Users\Forcause\Documents\Progs\C#\Test\Solutions\bin\Debug\Solutions.dll
+C:\Users\Forcause\Documents\Progs\C#\Test\Solutions\bin\Debug\Solutions.pdb
+C:\Users\Forcause\Documents\Progs\C#\Test\Solutions\obj\Debug\Solutions.csprojAssemblyReference.cache
+C:\Users\Forcause\Documents\Progs\C#\Test\Solutions\obj\Debug\Solutions.csproj.CoreCompileInputs.cache
+C:\Users\Forcause\Documents\Progs\C#\Test\Solutions\obj\Debug\Solutions.dll
+C:\Users\Forcause\Documents\Progs\C#\Test\Solutions\obj\Debug\Solutions.pdb

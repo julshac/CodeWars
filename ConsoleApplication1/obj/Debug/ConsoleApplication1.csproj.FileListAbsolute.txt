@@ -1,0 +1,9 @@
+C:\Users\Forcause\Documents\Progs\C#\Test\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\Forcause\Documents\Progs\C#\Test\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\Forcause\Documents\Progs\C#\Test\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojAssemblyReference.cache
+C:\Users\Forcause\Documents\Progs\C#\Test\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.CoreCompileInputs.cache
+C:\Users\Forcause\Documents\Progs\C#\Test\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\Forcause\Documents\Progs\C#\Test\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\Forcause\Documents\Progs\C#\Test\ConsoleApplication1\bin\Debug\Solutions.dll
+C:\Users\Forcause\Documents\Progs\C#\Test\ConsoleApplication1\bin\Debug\Solutions.pdb
+C:\Users\Forcause\Documents\Progs\C#\Test\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.CopyComplete
