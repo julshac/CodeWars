@@ -26,10 +26,8 @@ namespace ConsoleApplication1
                 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 
                 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
             };
-            foreach(var n in str)
-            {
-                if (alphabet.Contains(char.ToUpper(n))) alphabet.Remove(char.ToUpper(n));
-            }
+            foreach (var n in str.Where(n => alphabet.Contains(char.ToUpper(n))))
+                alphabet.Remove(char.ToUpper(n));
             return alphabet.Count == 0;
         }
         
@@ -43,27 +41,23 @@ namespace ConsoleApplication1
         {
             var letters = new Dictionary<char, int>();
             var res = ' ';
-            var let = new List<char>();
-            
-            foreach (var t in s) let.Add(char.ToUpper(t));
-            
-            for (var i = 0; i < let.Count; ++i)
+            var let = s.Select(t => char.ToUpper(t)).ToList();
+
+            foreach (var letter in @let)
             {
-                if (letters.Keys.Contains(let[i]))
+                if (letters.Keys.Contains(letter))
                 {
-                    var tmp = letters[@let[i]];
-                    letters[let[i]] = tmp + 1;
+                    var tmp = letters[letter];
+                    letters[letter] = tmp + 1;
                     continue;
                 }
-                letters.Add(let[i], 1);
+                letters.Add(letter, 1);
             }
             
             if (letters.Values.Contains(1)) res = letters.First(x => x.Value == 1).Key;
 
-            foreach (var t in s)
-            {
-                if (t == res || t == res + 32 || t == res - 32) return Convert.ToString(t);
-            }
+            foreach (var t in s.Where(t => t == res || t == res + 32 || t == res - 32))
+                return Convert.ToString(t);
             return "";
         }
 
