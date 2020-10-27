@@ -4,27 +4,23 @@ using System.Linq;
 
 namespace ConsoleApplication1
 {
-    public class Solutions
+    public static class Solutions
     {
         public static string GetReadableTime(int seconds)
         {
-            int hours, minutes, sec;
-            string res = "";
-            hours = seconds / 3600;
-            if (hours < 10) res += "0" + hours + ":";
-            else res += hours + ":";
-            minutes = (seconds - (3600 * hours)) / 60;
-            if (minutes < 10) res += "0" + minutes + ":";
-            else res += minutes + ":";
-            sec = seconds - (3600 * hours) - (minutes * 60);
-            if (sec < 10) res += "0" + sec;
-            else res += sec; 
+            var res = "";
+            var hours = seconds / 3600;
+            res += hours < 10 ? "0" + hours + ":" : hours + ":";
+            var minutes = (seconds - (3600 * hours)) / 60;
+            res += minutes < 10 ? "0" + minutes + ":" : minutes + ":";
+            var sec = seconds - (3600 * hours) - (minutes * 60);
+            res += sec < 10 ? "0" + sec : sec.ToString();
             return res;
         }
         
         public static bool IsPangram(string str)
         {
-            List<char> alphabet = new List<char>()
+            var alphabet = new List<char>()
             {
                 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
                 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 
@@ -39,24 +35,23 @@ namespace ConsoleApplication1
         
         public static int CountingBits(int numb)
         {
-            string bits = Convert.ToString(numb, 2);
+            var bits = Convert.ToString(numb, 2);
             return bits.Count(n => n == '1');
         }
         
         public static string FirstNonRepeatingLetter(string s)
         {
-            Dictionary<char, int> letters = new Dictionary<char, int>();
-            int tmp = 0;
-            char res = ' ';
-            List<char> let = new List<char>();
+            var letters = new Dictionary<char, int>();
+            var res = ' ';
+            var let = new List<char>();
             
-            foreach (char t in s) let.Add(char.ToUpper(t));
+            foreach (var t in s) let.Add(char.ToUpper(t));
             
-            for (int i = 0; i < let.Count; ++i)
+            for (var i = 0; i < let.Count; ++i)
             {
                 if (letters.Keys.Contains(let[i]))
                 {
-                    tmp = letters[let[i]];
+                    var tmp = letters[@let[i]];
                     letters[let[i]] = tmp + 1;
                     continue;
                 }
@@ -74,16 +69,14 @@ namespace ConsoleApplication1
 
         public static int[] BubbleSort(int[] arr)
         {
-            for (int i = 0; i < arr.Length - 1; ++i)
+            for (var i = 0; i < arr.Length - 1; ++i)
             {
-                for (int j = i + 1; j < arr.Length; ++j)
+                for (var j = i + 1; j < arr.Length; ++j)
                 {
-                    if (arr[i] > arr[j])
-                    {
-                        int tmp = arr[i];
-                        arr[i] = arr[j];
-                        arr[j] = tmp;
-                    }
+                    if (arr[i] <= arr[j]) continue;
+                    var tmp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = tmp;
                 }
             }
             return arr;
